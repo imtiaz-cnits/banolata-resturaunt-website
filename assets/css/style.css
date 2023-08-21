@@ -619,9 +619,88 @@
   color: var(--font-color);
 }
 
+.mobile_menu_content {
+  display: none;
+}
+
 @media screen and (max-width: 990px) {
   .menu_item {
     height: auto;
+  }
+
+  .mobile_menu_content {
+    display: block;
+  }
+
+  .menu_content h1 {
+    font-size: 2em;
+  }
+
+  .tab_menu {
+    display: none;
+  }
+
+  .mobile_menu_item_tab {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .mobile_menu_item_tab.dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+  }
+
+  .mobile_menu_item_tab li {
+    margin: 0 10px;
+    white-space: nowrap;
+    padding: 6px 10px;
+  }
+
+  .mobile_menu_item_tab.dragging .menu_tab_btn {
+    user-select: none;
+  }
+
+  .mobile_menu_tabs {
+    overflow-x: hidden;
+    position: relative;
+    margin: 30px 0 40px;
+  }
+
+  .mobile_menu_tabs .tab_icons {
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mobile_menu_tabs .tab_icons:first-child {
+    left: 0;
+    display: none;
+    background: linear-gradient(90deg, #fff 50%, transparent);
+  }
+
+  .mobile_menu_tabs .tab_icons:last-child {
+    right: 0;
+    justify-content: flex-end;
+    background: linear-gradient(-90deg, #fff 50%, transparent);
+  }
+
+  .mobile_menu_tabs .tab_icons i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 1.4em;
+    cursor: pointer;
+    color: var(--secondary-color);
   }
 }
 

@@ -47,3 +47,39 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
+
+// scrollable tabs work
+const tabBox = document.querySelector(".mobile_menu_item_tab"),
+  arrowIcons = document.querySelectorAll(".tab_icons i");
+
+const handleIcons = () => {
+  let scrollVal = Math.round(tabBox.scrollLeft);
+  let maxScrollableWidth = tabBox.scrollWidth - tabBox.clientWidth;
+  arrowIcons[0].parentElement.style.display = scrollVal > 0 ? "flex" : "none";
+  arrowIcons[1].parentElement.style.display =
+    maxScrollableWidth > scrollVal ? "flex" : "none";
+};
+
+arrowIcons.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    tabBox.scrollLeft += icon.id === "left" ? -200 : 200;
+    setTimeout(() => handleIcons(), 50);
+  });
+});
+
+let isDragging = false;
+const dragging = (e) => {
+  if (!isDragging) return;
+  tabBox.classList.add("dragging");
+  tabBox.scrollLeft -= e.movementX;
+  setTimeout(() => handleIcons(), 50);
+};
+
+const dragStop = () => {
+  tabBox.classList.remove("dragging");
+  isDragging = false;
+};
+
+tabBox.addEventListener("mousedown", () => (isDragging = true));
+tabBox.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
