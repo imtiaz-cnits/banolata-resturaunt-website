@@ -644,8 +644,13 @@
     display: flex;
     align-items: center;
     margin: 0;
-    overflow: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
+  }
+
+  .mobile_menu_item_tab::-webkit-scrollbar {
+    display: none;
+    width: 0;
   }
 
   .mobile_menu_item_tab.dragging {
