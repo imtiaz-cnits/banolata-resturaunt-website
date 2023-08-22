@@ -699,7 +699,7 @@
   .mobile_menu_tabs .tab_icons i {
     width: 40px;
     height: 40px;
-    line-height: 40px;
+    line-height: 36px;
     text-align: center;
     border: 2px solid var(--secondary-color);
     border-radius: 4px;
@@ -996,6 +996,129 @@
 }
 
 /* Events end */
+
+/* Testimonial Start */
+
+#testimonial {
+  margin-bottom: 50px;
+}
+
+.tesmonial_header h2 {
+  background: url(../img/section-header-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  font-family: var(--secondary-font);
+  color: var(--global-color);
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+}
+
+.tesmonial_header h1 {
+  font-family: var(--secondary-font);
+  color: var(--font-color);
+  font-weight: 700;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.testimonial_avatars {
+  width: 280px;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial_avatars_img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.slide p {
+  text-align: center;
+  font-family: var(--primary-font);
+  color: var(--gray);
+  margin-bottom: 40px;
+}
+
+.slide h3 {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 1.5em;
+  margin: 20px 0 5px;
+}
+
+.testimonial_rating {
+  text-align: center;
+}
+
+.testimonial_rating span i {
+  color: var(--primary-color);
+}
+
+.testimonial_rating span:last-child i {
+  color: var(--gray);
+}
+
+.testimonial_wapper {
+  position: relative;
+}
+
+.testimonials {
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* swiper button css */
+
+.slide_arrow_icons {
+  width: 45px !important;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide_arrow_icons:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.slide_arrow_icons::after,
+.slide_arrow_icons::before {
+  font-size: 2em !important;
+  color: var(--secondary-color);
+}
+
+/* .swiper-pagination-bullet {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.swiper-pagination-bullet-active {
+  background-color: #4070f4;
+} */
+
+@media screen and (max-width: 990px) {
+  .tesmonial_header h1 {
+    font-size: 2.4em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide_arrow_icons {
+    display: none !important;
+  }
+}
+
+/* Testimonial End */
 
 /* Newsletter start */
 
