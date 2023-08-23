@@ -1828,3 +1828,66 @@
 }
 
 /* Contact End */
+
+/* 
+
+//
+//
+//// About Page ////
+//
+//
+
+ */
+
+/* About Hero Start */
+
+#contact_hero {
+  background-image: url(../img/about/about_hero_bg_img.png);
+  height: 80vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.about_hero_content {
+  text-align: center;
+  margin-top: -90px;
+}
+
+.about_hero_content h1 {
+  font-family: var(--header-font);
+  font-size: 3.5em;
+  color: var(--primary-color);
+}
+
+.about_hero_content .about_hero_devider {
+  width: 320px;
+  height: 4px;
+  background-color: var(--global-color);
+  border-radius: 30px;
+  margin: auto;
+}
+
+.about_hero_content p {
+  font-family: var(--primary-font);
+  color: var(--global-color);
+  font-size: 1.8em;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .about_hero_content h1 {
+    font-size: 3em;
+  }
+
+  .about_hero_content .about_hero_devider {
+    width: 270px;
+  }
+
+  .about_hero_content p {
+    font-size: 1.6em;
+  }
+}
+
+/* About Hero End */
