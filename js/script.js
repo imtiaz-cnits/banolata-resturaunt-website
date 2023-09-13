@@ -94,3 +94,5 @@ const dragStop = () => {
 tabBox.addEventListener("mousedown", () => (isDragging = true));
 tabBox.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
+
+// reservation modal
